@@ -7,11 +7,12 @@ public class BowlScore {
 
 	}
 
-	public Object registerScore(int input) {
-		if (input == 9)
+	public Object registerScore(String input) {
+		if (String.valueOf(input) == "9")
 			return String.valueOf(input);
 		return null;
 	}
+
 
 	
 

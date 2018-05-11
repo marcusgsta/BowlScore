@@ -16,8 +16,14 @@ public class BowlScoreTest {
 	
 	@Test
 	public void shouldReturnNine() {
-		int input = 9;
+		String input = "9";
 		assertEquals(String.valueOf(input), bowlscore.registerScore(input));
+	}
+	
+	@Test
+	public void shouldReturnZero() {
+		String input = "dash";
+		assertEquals(String.valueOf("0"), bowlscore.registerScore(input));
 	}
 
 	
