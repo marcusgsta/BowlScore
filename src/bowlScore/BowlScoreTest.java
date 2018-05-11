@@ -25,6 +25,12 @@ public class BowlScoreTest {
 		String input = "dash";
 		assertEquals(String.valueOf("0"), bowlscore.registerScore(input));
 	}
+	
+	@Test
+	public void shouldReturnThree() {
+		String input = "3";
+		assertEquals(String.valueOf("3"), bowlscore.registerScore(input));
+	}
 
 	
 }
