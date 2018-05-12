@@ -15,6 +15,8 @@ public class BowlScore {
 				partSum += 0;
 			else if (input[i] == "strike")
 				partSum += 10;
+			else if (input[i] == "spare")
+				partSum = 10;
 			else {
 				int intInput;
 				intInput = Integer.parseInt(input[i]);

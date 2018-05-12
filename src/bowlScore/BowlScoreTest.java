@@ -62,4 +62,10 @@ public class BowlScoreTest {
 		assertEquals(10, bowlscore.registerScore(input));
 	}
 	
+	@Test
+	public void shouldReturn10() {
+		String[] input = {"8", "spare"};
+		assertEquals(10, bowlscore.registerScore(input));
+	}
+	
 }
