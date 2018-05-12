@@ -16,31 +16,31 @@ public class BowlScoreTest {
 	
 	@Test
 	public void shouldReturnNine() {
-		String input = "9";
+		String[] input = {"9"};
 		assertEquals(String.valueOf(input), bowlscore.registerScore(input));
 	}
 	
 	@Test
 	public void shouldReturnZero() {
-		String input = "dash";
+		String[] input = {"dash"};
 		assertEquals(String.valueOf("0"), bowlscore.registerScore(input));
 	}
 	
 	@Test
 	public void shouldReturnThree() {
-		String input = "3";
+		String[] input = {"3"};
 		assertEquals(String.valueOf("3"), bowlscore.registerScore(input));
 	}
 
 	@Test
 	public void shouldAlsoReturnZero() {
-		String input = "foul";
+		String[] input = {"foul"};
 		assertEquals(String.valueOf("0"), bowlscore.registerScore(input));
 	}
 	
 	@Test
 	public void shouldReturnTen() {
-		String input = "strike";
+		String[] input = {"strike"};
 		assertEquals(String.valueOf("10"), bowlscore.registerScore(input));
 	}
 	
