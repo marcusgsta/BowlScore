@@ -90,9 +90,9 @@ public class BowlScoreTest {
 	}
 	
 	@Test
-	public void shouldReturn11() {
+	public void shouldReturn7() {
 		int[] input = {4, 3, 4};
-		assertEquals(11, bowlscore.registerScore(input));
+		assertEquals(7, bowlscore.registerScore(input));
 	}
 
 	@Test
