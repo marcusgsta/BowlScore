@@ -25,7 +25,20 @@ public class BowlScore {
 			if (input[i] >= 0 || input[i] <= 10)
 				partScore += input[i];
 				System.out.println(partScore);
-				if ( count == 2) {
+				if ( count == 1 ) {
+					if ( partScore == 10 ) {
+						strike = true;
+						currentFrame++;
+					}
+				}
+				if ( count == 3 && strike == true ) {
+					frames[currentFrame-1] += partScore;
+					frames[currentFrame] += partScore - 10;
+					partScore = 0;
+					count = 0;
+				}
+				
+				if ( count == 2 && strike == false) {
 					if ( partScore != 10) {
 						frames[currentFrame] += partScore;
 						currentFrame++;
