@@ -32,5 +32,10 @@ public class BowlScoreTest {
 		assertEquals(String.valueOf("3"), bowlscore.registerScore(input));
 	}
 
+	@Test
+	public void shouldAlsoReturnZero() {
+		String input = "foul";
+		assertEquals(String.valueOf("0"), bowlscore.registerScore(input));
+	}
 	
 }
