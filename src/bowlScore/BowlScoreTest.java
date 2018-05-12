@@ -16,92 +16,107 @@ public class BowlScoreTest {
 	
 	@Test
 	public void shouldReturnNine() {
-		String[] input = {"9"};
+		int[] input = {9};
 		assertEquals(9, bowlscore.registerScore(input));
 	}
 	
 	@Test
 	public void shouldReturnZero() {
-		String[] input = {"dash"};
+		int[] input = {0};
 		assertEquals(0, bowlscore.registerScore(input));
 	}
 	
 	@Test
 	public void shouldReturnThree() {
-		String[] input = {"3"};
+		int[] input = {3};
 		assertEquals(3, bowlscore.registerScore(input));
 	}
 
+	/* Test for foul ball
+	 * 
+	 */
 	@Test
 	public void shouldAlsoReturnZero() {
-		String[] input = {"foul"};
+		int[] input = {0};
 		assertEquals(0, bowlscore.registerScore(input));
 	}
 	
+	/*
+	 * Test for one strike
+	 */
 	@Test
 	public void shouldReturnTen() {
-		String[] input = {"strike"};
+		int[] input = {10};
 		assertEquals(10, bowlscore.registerScore(input));
 	}
 	
 	@Test
 	public void shouldReturn9() {
-		String[] input = {"4", "5"};
+		int[] input = {4, 5};
 		assertEquals(9, bowlscore.registerScore(input));
 	}
 	
 	@Test
 	public void shouldReturn5() {
-		String[] input = {"3", "2"};
+		int[] input = {3, 2};
 		assertEquals(5, bowlscore.registerScore(input));
 	}
-	
+
+	/*
+	 * Test for spare (2 balls)
+	 */
 	@Test
 	public void shouldReturn10() {
-		String[] input = {"4", "spare"};
+		int[] input = {4, 6};
 		assertEquals(10, bowlscore.registerScore(input));
 	}
 	
 	@Test
 	public void shouldAlsoReturn10() {
-		String[] input = {"8", "spare"};
+		int[] input = {8, 2};
 		assertEquals(10, bowlscore.registerScore(input));
 	}
 	
 	@Test
 	public void shouldAlsoReturn17() {
-		String[] input = {"strike", "7"};
+		int[] input = {10, 7};
 		assertEquals(17, bowlscore.registerScore(input));
 	}
 	
 	@Test
 	public void shouldAlsoReturnNine() {
-		String[] input = {"dash", "9"};
+		int[] input = {0, 9};
 		assertEquals(9, bowlscore.registerScore(input));
 	}
 	
 	@Test
 	public void shouldReturn11() {
-		String[] input = {"4", "3", "4"};
+		int[] input = {4, 3, 4};
 		assertEquals(11, bowlscore.registerScore(input));
 	}
 
 	@Test
 	public void shouldReturn14() {
-		String[] input = {"4", "spare", "4"};
+		int[] input = {4, 6, 4};
 		assertEquals(14, bowlscore.registerScore(input));
 	}
 	
 	@Test
 	public void shouldReturn34() {
-		String[] input = {"strike", "8", "4"};
+		int[] input = {10, 8, 4};
 		assertEquals(34, bowlscore.registerScore(input));
 	}
 	
 	@Test
 	public void shouldReturn32() {
-		String[] input = {"strike", "8", "1", "4"};
+		int[] input = {10, 8, 1, 4};
 		assertEquals(32, bowlscore.registerScore(input));
+	}
+	
+	@Test
+	public void shouldReturn35() {
+		int[] input = {10, 8, 1, 4, 3};
+		assertEquals(35, bowlscore.registerScore(input));
 	}
 	
 }
