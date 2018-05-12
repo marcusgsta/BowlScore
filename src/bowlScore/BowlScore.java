@@ -17,7 +17,6 @@ public class BowlScore {
 		boolean spare = false;
 		int savedPoints = 0;
 		int currentFrame = 0;
-		int lastFrame = currentFrame - 1;
 		int[] frames = new int[10];
 		int count = 1;
 		int partScore = 0;
@@ -27,9 +26,19 @@ public class BowlScore {
 				partScore += input[i];
 				System.out.println(partScore);
 				if ( count == 2) {
-					frames[currentFrame] += partScore;
-					currentFrame++;
+					if ( partScore != 10) {
+						frames[currentFrame] += partScore;
+						currentFrame++;
+						partScore = 0;
+					} else {
+						spare = true;
+						currentFrame++;
+					}
+				} else if ( count == 3 && spare == true) {
+					frames[currentFrame-1] += partScore;
 					partScore = 0;
+					spare = false;
+					count = 0;
 				}
 				count++;
 			
