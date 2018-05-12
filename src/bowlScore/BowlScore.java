@@ -10,7 +10,9 @@ public class BowlScore {
 	public Object registerScore(String input) {
 		if (input == "dash")
 			return "0";
-
+		if (input == "foul")
+			return "0";
+					
 		int intInput;
 		intInput = Integer.parseInt(input);
 		
