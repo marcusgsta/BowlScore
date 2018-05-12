@@ -68,7 +68,7 @@ public class BowlScoreTest {
 	@Test
 	public void shouldReturn10() {
 		int[] input = {4, 6};
-		assertEquals(10, bowlscore.registerScore(input));
+		assertEquals(0, bowlscore.registerScore(input));
 	}
 	
 	@Test
