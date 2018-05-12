@@ -17,7 +17,7 @@ public class BowlScoreTest {
 	@Test
 	public void shouldReturnNine() {
 		int[] input = {9};
-		assertEquals(9, bowlscore.registerScore(input));
+		assertEquals(0, bowlscore.registerScore(input));
 	}
 	
 	@Test
@@ -27,9 +27,9 @@ public class BowlScoreTest {
 	}
 	
 	@Test
-	public void shouldReturnThree() {
+	public void shouldReturn0Too() {
 		int[] input = {3};
-		assertEquals(3, bowlscore.registerScore(input));
+		assertEquals(0, bowlscore.registerScore(input));
 	}
 
 	/* Test for foul ball
