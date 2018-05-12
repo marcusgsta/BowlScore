@@ -50,5 +50,11 @@ public class BowlScoreTest {
 		assertEquals(9, bowlscore.registerScore(input));
 	}
 	
+	@Test
+	public void shouldReturn5() {
+		String[] input = {"3", "2"};
+		assertEquals(5, bowlscore.registerScore(input));
+	}
+	
 	
 }
