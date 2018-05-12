@@ -45,9 +45,9 @@ public class BowlScoreTest {
 	 * Test for one strike
 	 */
 	@Test
-	public void shouldReturnTen() {
+	public void shouldReturn0() {
 		int[] input = {10};
-		assertEquals(10, bowlscore.registerScore(input));
+		assertEquals(0, bowlscore.registerScore(input));
 	}
 	
 	@Test

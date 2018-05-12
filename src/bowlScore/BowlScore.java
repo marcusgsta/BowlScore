@@ -25,10 +25,12 @@ public class BowlScore {
 		for (int i = 0; i < input.length; i++) {
 			if (input[i] >= 0 || input[i] <= 10)
 				partScore += input[i];
-				if ( count == 2)
+				System.out.println(partScore);
+				if ( count == 2) {
 					frames[currentFrame] += partScore;
 					currentFrame++;
 					partScore = 0;
+				}
 				count++;
 			
 				/*
@@ -52,7 +54,7 @@ public class BowlScore {
 		int sum = IntStream.of(frames).sum();
 		System.out.println(Arrays.toString(frames));
 
-		System.out.println(sum);
+		//System.out.println(sum);
 		//totalSum = partSum;
 		return sum;
 	}
