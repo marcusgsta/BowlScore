@@ -39,7 +39,7 @@ public class BowlScoreTest {
 	}
 	
 	@Test
-	public void shouldAlsoReturnTen() {
+	public void shouldReturnTen() {
 		String input = "strike";
 		assertEquals(String.valueOf("10"), bowlscore.registerScore(input));
 	}
