@@ -8,7 +8,7 @@ public class BowlScore {
 	}
 
 	public Object registerScore(String[] input) {
-		String totalSum;
+		int totalSum;
 		int partSum = 0;
 		for (int i = 0; i < input.length; i++)
 			if (input[i] == "dash" || input[i] == "foul")
@@ -21,7 +21,7 @@ public class BowlScore {
 				if (intInput > 0 || intInput < 10)
 					partSum += intInput;
 			}
-		totalSum = String.valueOf(partSum);
+		totalSum = partSum;
 		return totalSum;
 	}
 
