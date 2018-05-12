@@ -44,4 +44,11 @@ public class BowlScoreTest {
 		assertEquals(String.valueOf("10"), bowlscore.registerScore(input));
 	}
 	
+	@Test
+	public void shouldReturn9() {
+		String[] input = {"4", "5"};
+		assertEquals(String.valueOf("9"), bowlscore.registerScore(input));
+	}
+	
+	
 }
