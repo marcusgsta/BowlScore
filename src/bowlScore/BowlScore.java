@@ -36,6 +36,7 @@ public class BowlScore {
 					frames[currentFrame] += partScore - 10;
 					partScore = 0;
 					count = 0;
+					strike = false;
 				}
 				
 				if ( count == 2 && strike == false) {
