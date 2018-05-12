@@ -7,20 +7,22 @@ public class BowlScore {
 
 	}
 
-	public Object registerScore(String input) {
-		if (input == "dash" || input == "foul")
-			return "0";
-
-		if (input == "strike")
-			return "10";
-		
-		int intInput;
-		intInput = Integer.parseInt(input);
-		
-		if (intInput > 0 || intInput < 10)
-			return String.valueOf(input);
-
-		return null;
+	public Object registerScore(String[] input) {
+		String totalSum;
+		int partSum = 0;
+		for (int i = 0; i < input.length; i++)
+			if (input[i] == "dash" || input[i] == "foul")
+				partSum += 0;
+			else if (input[i] == "strike")
+				partSum += 10;
+			else {
+				int intInput;
+				intInput = Integer.parseInt(input[i]);
+				if (intInput > 0 || intInput < 10)
+					partSum += intInput;
+			}
+		totalSum = String.valueOf(partSum);
+		return totalSum;
 	}
 
 
