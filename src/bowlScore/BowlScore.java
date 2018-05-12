@@ -8,9 +8,7 @@ public class BowlScore {
 	}
 
 	public Object registerScore(String input) {
-		if (input == "dash")
-			return "0";
-		if (input == "foul")
+		if (input == "dash" || input == "foul")
 			return "0";
 					
 		int intInput;
