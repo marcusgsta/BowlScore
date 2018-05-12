@@ -80,4 +80,10 @@ public class BowlScoreTest {
 		assertEquals(9, bowlscore.registerScore(input));
 	}
 	
+	@Test
+	public void shouldReturn11() {
+		String[] input = {"4", "3", "4"};
+		assertEquals(11, bowlscore.registerScore(input));
+	}
+	
 }
