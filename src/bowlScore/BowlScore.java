@@ -7,22 +7,16 @@ public class BowlScore {
 
 	}
 
-	public Object registerScore(String[] input) {
+	public Object registerScore(int[] input) {
 		int totalSum;
 		int partSum = 0;
-		for (int i = 0; i < input.length; i++)
-			if (input[i] == "dash" || input[i] == "foul")
-				partSum += 0;
-			else if (input[i] == "strike")
-				partSum += 10;
-			else if (input[i] == "spare")
-				partSum = 10;
-			else {
-				int intInput;
-				intInput = Integer.parseInt(input[i]);
-				if (intInput > 0 || intInput < 10)
-					partSum += intInput;
-			}
+		int strike = 0;
+		int[] frames = new int[10];
+		for (int i = 0; i < input.length; i++) {
+			if (input[i] >= 0 || input[i] <= 10)
+				partSum += input[i];
+		}
+		
 		totalSum = partSum;
 		return totalSum;
 	}
