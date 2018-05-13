@@ -15,7 +15,7 @@ public class BowlScoreTest {
 	}
 	
 	@Test
-	public void shouldReturnNine() {
+	public void shouldReturnZilch() {
 		int[] input = {9};
 		assertEquals(0, bowlscore.registerScore(input));
 	}
@@ -47,7 +47,7 @@ public class BowlScoreTest {
 	@Test
 	public void shouldReturn0() {
 		int[] input = {10};
-		assertEquals(0, bowlscore.registerScore(input));
+		assertEquals(10, bowlscore.registerScore(input));
 	}
 	
 	@Test
@@ -66,21 +66,21 @@ public class BowlScoreTest {
 	 * Test for spare (2 balls)
 	 */
 	@Test
-	public void shouldReturn10() {
+	public void shouldReturn0Aswell() {
 		int[] input = {4, 6};
-		assertEquals(0, bowlscore.registerScore(input));
+		assertEquals(10, bowlscore.registerScore(input));
 	}
 	
 	@Test
 	public void shouldAlsoReturn10() {
 		int[] input = {8, 2};
-		assertEquals(0, bowlscore.registerScore(input));
+		assertEquals(10, bowlscore.registerScore(input));
 	}
 	
 	@Test
-	public void shouldAlsoReturn0() {
+	public void shouldReturn10() {
 		int[] input = {10, 7};
-		assertEquals(0, bowlscore.registerScore(input));
+		assertEquals(10, bowlscore.registerScore(input));
 	}
 	
 	@Test
