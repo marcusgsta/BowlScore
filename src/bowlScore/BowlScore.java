@@ -17,6 +17,7 @@ public class BowlScore {
 		boolean frameIsOver = false;
 		boolean isSpare = false;
 		int totalScore = 0;
+		int strikeBonus = 0;
 		
 		for (int i = 0; i < input.length; i++) {
 			if (input[i] >= 0 || input[i] <= 10)
@@ -24,26 +25,25 @@ public class BowlScore {
 				
 				if (isSpare == true) {
 					partScore += input[i];
-					System.out.println(isSpare);
 					isSpare = false;
 				}
 			
-				if ( strike == 1 ) {
-					partScore += input[i];
-					strike -= 1;
-				}
-			
 				if ( count == 1 ) {
+					if ( strike == 1 ) {
+						strikeBonus += input[i];
+					}
 					if ( input[i] == 10 ) {
 						strike += 1;
+						count = 0;
 					}
 				}
 				
 				if ( count == 2 ) {
 					if ( partScore == 10 ) {
 						isSpare = true;
-					} else if ( input[i] == 10 ) {
-						strike += 1;
+					} else if ( strike == 1 ) {
+						strikeBonus += input[i];
+						strike -= 1;
 					}
 					totalScore += partScore;
 					partScore = 0;
@@ -152,7 +152,8 @@ public class BowlScore {
 		//int sum = IntStream.of(frames).sum();
 		//System.out.println(Arrays.toString(frames));
 
-		//System.out.println(sum);
+		System.out.println(strikeBonus);
+		totalScore += strikeBonus;
 		int totalSum = totalScore;
 		return totalSum;
 	}
