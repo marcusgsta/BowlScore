@@ -68,5 +68,11 @@ public class BowlScoreTest {
 		assertEquals(107, bowlscore.registerScore(input));
 	}
 	
+	@Test
+	public void shouldReturn300() {
+		int[] input = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+		assertEquals(300, bowlscore.registerScore(input));
+	}
+	
 	
 }
