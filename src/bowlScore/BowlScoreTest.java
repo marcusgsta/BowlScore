@@ -32,6 +32,12 @@ public class BowlScoreTest {
 		assertEquals(46, bowlscore.registerScore(input));
 	}
 	
+	@Test
+	public void shouldReturn40() {
+		int[] input = {10, 1,2, 1,2, 1,2, 1,2, 1,2, 1,2, 1,2, 1,2, 1,2};
+		assertEquals(40, bowlscore.registerScore(input));
+	}
+	
 	/*
 	@Test
 	public void shouldReturnZilch() {
