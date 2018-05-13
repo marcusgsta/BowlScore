@@ -1,27 +1,24 @@
 package bowlScore;
 
-import java.util.Arrays;
-import java.util.stream.IntStream;
-
 public class BowlScore {
 
 	public Object registerScore(int[] input) {
 		int strike = 0;
 		int currentFrame = 0;
-		int[] frames = new int[10];
-		int count = 1;
+		int ball = 1;
 		int partScore = 0;
 		boolean isSpare = false;
 		int totalScore = 0;
 		int strikeBonus = 0;
 		int spareBonus = 0;
 		boolean strikeStep = false;
+		boolean lastFrame = false;
 		
 		for (int i = 0; i < input.length; i++) {
 			if (input[i] >= 0 || input[i] <= 10)
 				partScore += input[i];
 			
-				if ( count == 1 ) {
+				if ( ball == 1 ) {
 					if ( strikeStep == true ) {
 						strikeBonus += input[i];
 						strikeStep = false;
@@ -35,18 +32,23 @@ public class BowlScore {
 						isSpare = false;
 					}
 
-					if ( input[i] == 10 ) {
+					if ( input[i] == 10 && lastFrame == false) {
 						strike += 1;
 						totalScore += partScore;
 						partScore = 0;
-						count = 0;
+						ball = 0;
 						currentFrame++;
+						if ( currentFrame == 10) {
+							lastFrame = true;
+						}
+						// if strike in last frame
+					} else if ( input[i] == 10 && lastFrame == true) {
+							ball = 0;
 					}
-					
 				}
 				
 				
-				if ( count == 2 ) {
+				if ( ball == 2 ) {
 					if ( strikeStep == true ) {
 						strikeBonus += input[i];
 						strikeStep = false;
@@ -61,23 +63,17 @@ public class BowlScore {
 					}
 					totalScore += partScore;
 					partScore = 0;
-					count = 0;
+					ball = 0;
 					currentFrame++;
 				} 
 				
-				
-				count++;
+				ball++;
 		}
+
 		
-		//System.out.println(strikeBonus);
-		System.out.println(currentFrame);
 		totalScore += spareBonus;
 		totalScore += strikeBonus;
 		int totalSum = totalScore;
 		return totalSum;
 	}
-
-
-	
-
 }
