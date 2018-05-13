@@ -80,4 +80,10 @@ public class BowlScoreTest {
 		Object o = bowlscore.registerScore(input);
 	}
 	
+	@Test
+	public void shouldReturn267() {
+		int[] input = {10, 10, 10, 10, 10, 10, 10, 10, 10, 9, 0};
+		assertEquals(267, bowlscore.registerScore(input));
+	}
+	
 }
