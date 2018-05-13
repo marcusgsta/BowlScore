@@ -70,7 +70,7 @@ public class BowlScoreTest {
 	
 	@Test
 	public void shouldReturn300() {
-		int[] input = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+		int[] input = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
 		assertEquals(300, bowlscore.registerScore(input));
 	}
 	
