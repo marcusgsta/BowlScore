@@ -5,11 +5,6 @@ import java.util.stream.IntStream;
 
 public class BowlScore {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 	public Object registerScore(int[] input) {
 		int strike = 0;
 		boolean spare = false;
@@ -21,27 +16,52 @@ public class BowlScore {
 		int currentBall = 0;
 		boolean frameIsOver = false;
 		boolean isSpare = false;
+		int totalScore = 0;
 		
 		for (int i = 0; i < input.length; i++) {
 			if (input[i] >= 0 || input[i] <= 10)
 				partScore += input[i];
-				//System.out.println(partScore);
-
+				
+				if (isSpare == true) {
+					partScore += input[i];
+					System.out.println(isSpare);
+					isSpare = false;
+				}
 			
-				if ( count == 1 && partScore != 10 ) {
-					if (isSpare == true) {
-						frames[currentFrame-1] += partScore;
-						isSpare = false;
+				if ( strike == 1 ) {
+					partScore += input[i];
+					strike -= 1;
+				}
+			
+				if ( count == 1 ) {
+					if ( input[i] == 10 ) {
+						strike += 1;
 					}
 				}
 				
+				if ( count == 2 ) {
+					if ( partScore == 10 ) {
+						isSpare = true;
+					} else if ( input[i] == 10 ) {
+						strike += 1;
+					}
+					totalScore += partScore;
+					partScore = 0;
+					count = 0;
+				} 
+				
+				
+				/*if ( count == 1 && input[i] != 10 ) {
+					if (isSpare == true) {
+						//frames[currentFrame-1] += partScore;
+						partScore += input[i];
+						isSpare = false;
+					}
+				}*/
+				/*
 				if ( count == 1 && partScore == 10 ) {
 					strike += 1;
 					frames[currentFrame] += partScore;
-					if ( strike == 2 ) {
-						frames[currentFrame-1] += partScore;
-						//strike -= 1;
-					}
 					frameIsOver = true;
 					count = 0;
 					currentFrame++;
@@ -73,7 +93,7 @@ public class BowlScore {
 					currentFrame++;
 					count = 0;
 				}
-				
+				*/
 				/*if ( count == 2 && strike == 1) {
 					frames[currentFrame-1] += partScore + 10;
 					frames[currentFrame] += partScore;
@@ -129,12 +149,12 @@ public class BowlScore {
 				//currentFrame++;
 		}
 		
-		int sum = IntStream.of(frames).sum();
-		System.out.println(Arrays.toString(frames));
+		//int sum = IntStream.of(frames).sum();
+		//System.out.println(Arrays.toString(frames));
 
 		//System.out.println(sum);
-		//totalSum = partSum;
-		return sum;
+		int totalSum = totalScore;
+		return totalSum;
 	}
 
 
