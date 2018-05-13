@@ -1,9 +1,12 @@
 package bowlScore;
 
+import java.util.Arrays;
+
 public class BowlScore {
 
 	public Object registerScore(int[] input) {
 		int strike = 0;
+		int[] frames = new int[10];
 		int currentFrame = 0;
 		int ball = 1;
 		int partScore = 0;
@@ -37,6 +40,7 @@ public class BowlScore {
 						totalScore += partScore;
 						partScore = 0;
 						ball = 0;
+						frames[currentFrame] = totalScore;
 						currentFrame++;
 						if ( currentFrame == 10) {
 							lastFrame = true;
@@ -64,13 +68,13 @@ public class BowlScore {
 					totalScore += partScore;
 					partScore = 0;
 					ball = 0;
+					frames[currentFrame] = totalScore;
 					currentFrame++;
 				} 
 				
 				ball++;
 		}
 
-		
 		totalScore += spareBonus;
 		totalScore += strikeBonus;
 		int totalSum = totalScore;

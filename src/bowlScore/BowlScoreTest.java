@@ -76,7 +76,7 @@ public class BowlScoreTest {
 	
 	@Test(expected = IndexOutOfBoundsException.class)
 	public void testIndexOutOfBoundsException() {
-		int[] input = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+		int[] input = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 7, 7, 7};
 		Object o = bowlscore.registerScore(input);
 	}
 	
