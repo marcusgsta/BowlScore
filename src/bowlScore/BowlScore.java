@@ -38,6 +38,10 @@ public class BowlScore {
 				if ( count == 1 && partScore == 10 ) {
 					strike += 1;
 					frames[currentFrame] += partScore;
+					if ( strike == 2 ) {
+						frames[currentFrame-1] += partScore;
+						//strike -= 1;
+					}
 					frameIsOver = true;
 					count = 0;
 					currentFrame++;
@@ -50,6 +54,10 @@ public class BowlScore {
 						frames[currentFrame-1] += partScore;
 						strike -= 1;
 					}
+					if ( strike == 2 ) {
+						frames[currentFrame-2] += partScore;
+						strike -= 1;
+					}
 					frameIsOver = true;
 					partScore = 0;
 					currentFrame++;
@@ -57,9 +65,10 @@ public class BowlScore {
 				}
 				
 				if ( count == 2 && partScore == 10 ) {
+					frames[currentFrame] += partScore;
 					frameIsOver = true;
 					isSpare = true;
-					frames[currentFrame] += partScore;
+					
 					partScore = 0;
 					currentFrame++;
 					count = 0;
