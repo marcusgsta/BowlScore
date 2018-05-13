@@ -18,19 +18,18 @@ public class BowlScore {
 		boolean isSpare = false;
 		int totalScore = 0;
 		int strikeBonus = 0;
+		int spareBonus = 0;
 		
 		for (int i = 0; i < input.length; i++) {
 			if (input[i] >= 0 || input[i] <= 10)
 				partScore += input[i];
-				
-				if (isSpare == true) {
-					partScore += input[i];
-					isSpare = false;
-				}
 			
 				if ( count == 1 ) {
 					if ( strike == 1 ) {
 						strikeBonus += input[i];
+					} else if ( isSpare == true ) {
+						spareBonus += input[i];
+						isSpare = false;
 					}
 					if ( input[i] == 10 ) {
 						strike += 1;
@@ -153,6 +152,8 @@ public class BowlScore {
 		//System.out.println(Arrays.toString(frames));
 
 		System.out.println(strikeBonus);
+		System.out.println(spareBonus);
+		totalScore += spareBonus;
 		totalScore += strikeBonus;
 		int totalSum = totalScore;
 		return totalSum;
