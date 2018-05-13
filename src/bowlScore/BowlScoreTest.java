@@ -38,6 +38,13 @@ public class BowlScoreTest {
 		assertEquals(40, bowlscore.registerScore(input));
 	}
 	
+	@Test
+	public void shouldReturn0() {
+		int[] input = {0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0};
+		assertEquals(00, bowlscore.registerScore(input));
+	}
+	
+	
 	/*
 	@Test
 	public void shouldReturnZilch() {
