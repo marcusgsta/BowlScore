@@ -74,5 +74,10 @@ public class BowlScoreTest {
 		assertEquals(300, bowlscore.registerScore(input));
 	}
 	
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void testIndexOutOfBoundsException() {
+		int[] input = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+		Object o = bowlscore.registerScore(input);
+	}
 	
 }
