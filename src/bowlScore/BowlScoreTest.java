@@ -41,7 +41,13 @@ public class BowlScoreTest {
 	@Test
 	public void shouldReturn0() {
 		int[] input = {0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0};
-		assertEquals(00, bowlscore.registerScore(input));
+		assertEquals(0, bowlscore.registerScore(input));
+	}
+	
+	@Test
+	public void shouldReturn45() {
+		int[] input = {10, 10, 3,3, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0};
+		assertEquals(45, bowlscore.registerScore(input));
 	}
 	
 	
