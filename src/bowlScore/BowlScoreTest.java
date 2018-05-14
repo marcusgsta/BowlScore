@@ -100,4 +100,11 @@ public class BowlScoreTest {
 		Object o = bowlscore.registerScore(input);
 	}
 	
+	@Test
+	public void shouldReturn8() {
+		int[] frameOne = {2, 6};
+		int[][] input = {frameOne};
+		assertEquals(8, bowlscore.registerScore(input));
+	}
+	
 }
