@@ -17,6 +17,10 @@ public class BowlScore {
 		boolean strikeStep = false;
 		boolean lastFrame = false;
 		int count;
+		int[] game = new int[10];
+		if (input.length != 10) {
+			throw new IndexOutOfBoundsException("Index is out of bounds!");
+		}
 		
 		for (int m = 0; m < input.length; m++) {
 			// loop through frame

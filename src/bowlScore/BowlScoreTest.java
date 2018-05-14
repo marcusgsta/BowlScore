@@ -107,8 +107,25 @@ public class BowlScoreTest {
 		assertEquals(8, bowlscore.registerScore(input));
 	}
 	
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void shouldThrowExceptionTooManyFrames() {
+		int[] frameOne = {1,5};
+		int[] frameTwo = {3,6};
+		int[] frameThree = {7,2};
+		int[] frameFour = {3,6};
+		int[] frameFive = {4,4};
+		int[] frameSix = {5,3};
+		int[] frameSeven = {3,3};
+		int[] frameEight = {4,5};
+		int[] frameNine = {8,1};
+		int[] frameTen = {2,6};
+		int[] frameEleven = {2,6};
+		int[][] input = { frameOne, frameTwo, frameThree, frameFour, frameFive, frameSix, frameSeven, frameEight, frameNine, frameTen, frameEleven};
+		Object o = bowlscore.registerScore(input);
+	}   
+	
 	@Test
-	public void shouldReturn() {
+	public void shouldReturn81() {
 		int[] frameOne = {1,5};
 		int[] frameTwo = {3,6};
 		int[] frameThree = {7,2};
@@ -120,7 +137,7 @@ public class BowlScoreTest {
 		int[] frameNine = {8,1};
 		int[] frameTen = {2,6};
 		int[][] input = { frameOne, frameTwo, frameThree, frameFour, frameFive, frameSix, frameSeven, frameEight, frameNine, frameTen};
-		assertEquals(267, bowlscore.registerScore(input));
+		assertEquals(81, bowlscore.registerScore(input));
 	}                                                               		
 	                                                           
 	
