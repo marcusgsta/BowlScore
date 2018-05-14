@@ -16,17 +16,20 @@ public class BowlScore {
 		int spareBonus = 0;
 		boolean strikeStep = false;
 		boolean lastFrame = false;
-		int count = 0;
+		int count;
 		
 		for (int m = 0; m < input.length; m++) {
 			// loop through frame
+			count = 0;
 			for ( int h = 0; h < input[m].length; h++ ) {
-				count += h;
-			}
-			if ( count != 2 ) {
-				throw new IndexOutOfBoundsException("Index is out of bounds!");
-			}
+				if ( input[m].length != 2 ) {
+					throw new IndexOutOfBoundsException("Index is out of bounds!");
+				}
+				if (input[m][h] >= 0 || input[m][h] <= 10)
+					partScore += input[m][h];
 				
+			}
+				totalScore = partScore;
 			
 		}
 		/*
@@ -91,8 +94,7 @@ public class BowlScore {
 	
 		totalScore += spareBonus;
 		totalScore += strikeBonus;
-		int totalSum = totalScore;
-		return totalSum;*/
-		return "d";
+		int totalSum = totalScore; */
+		return totalScore;
 	}
 }

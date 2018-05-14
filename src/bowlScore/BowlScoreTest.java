@@ -94,7 +94,7 @@ public class BowlScoreTest {
 	}
 	
 	@Test(expected = IndexOutOfBoundsException.class)
-	public void shouldThrowException() {
+	public void shouldThrowException2() {
 		int[] frameOne = {2};
 		int[][] input = {frameOne};
 		Object o = bowlscore.registerScore(input);
