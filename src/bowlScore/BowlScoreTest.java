@@ -13,7 +13,7 @@ public class BowlScoreTest {
 	public void setUp() {
 		bowlscore = new BowlScore();
 	}
-	
+	/*
 	@Test
 	public void shouldReturn30() {
 		int[] input = {1,2, 1,2, 1,2, 1,2, 1,2, 1,2, 1,2, 1,2, 1,2, 1,2};
@@ -86,6 +86,8 @@ public class BowlScoreTest {
 		assertEquals(267, bowlscore.registerScore(input));
 	}
 	
+	*/
+	
 	@Test(expected = IndexOutOfBoundsException.class)
 	public void shouldThrowException() {
 		int[] frameOne = {2, 4, 3};
@@ -99,13 +101,7 @@ public class BowlScoreTest {
 		int[][] input = {frameOne};
 		Object o = bowlscore.registerScore(input);
 	}
-	
-	@Test
-	public void shouldReturn8() {
-		int[] frameOne = {2, 6};
-		int[][] input = {frameOne};
-		assertEquals(8, bowlscore.registerScore(input));
-	}
+
 	
 	@Test(expected = IndexOutOfBoundsException.class)
 	public void shouldThrowExceptionTooManyFrames() {
