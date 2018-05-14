@@ -16,7 +16,20 @@ public class BowlScore {
 		int spareBonus = 0;
 		boolean strikeStep = false;
 		boolean lastFrame = false;
+		int count = 0;
 		
+		for (int m = 0; m < input.length; m++) {
+			// loop through frame
+			for ( int h = 0; h < input[m].length; h++ ) {
+				count += h;
+			}
+			if ( count != 2 ) {
+				throw new IndexOutOfBoundsException("Index is out of bounds!");
+			}
+				
+			
+		}
+		/*
 		for (int i = 0; i < input.length; i++) {
 			if (input[i] >= 0 || input[i] <= 10)
 				partScore += input[i];
@@ -73,11 +86,13 @@ public class BowlScore {
 				} 
 				
 				ball++;
+				
 		}
-
+	
 		totalScore += spareBonus;
 		totalScore += strikeBonus;
 		int totalSum = totalScore;
-		return totalSum;
+		return totalSum;*/
+		return "d";
 	}
 }
