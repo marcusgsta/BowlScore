@@ -86,4 +86,11 @@ public class BowlScoreTest {
 		assertEquals(267, bowlscore.registerScore(input));
 	}
 	
+	@Test
+	public void shouldReturn6() {
+		int[] frameOne = {2, 4};
+		int[][] input = {frameOne};
+		assertEquals(6, bowlscore.registerScore(input));
+	}
+	
 }

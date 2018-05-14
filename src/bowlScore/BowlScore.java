@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class BowlScore {
 
-	public Object registerScore(int[] input) {
+	public Object registerScore(int[][] input) {
 		int strike = 0;
 		int[] frames = new int[10];
 		int currentFrame = 0;
