@@ -18,23 +18,53 @@ public class BowlScore {
 		boolean lastFrame = false;
 		int count;
 		int[] game = new int[10];
+		
 		if (input.length != 10) {
 			throw new IndexOutOfBoundsException("Index is out of bounds!");
 		}
-		
+			// loop through all frames
 		for (int m = 0; m < input.length; m++) {
 			// loop through frame
-			count = 0;
+			//count = 0;
+			
 			for ( int h = 0; h < input[m].length; h++ ) {
 				if ( input[m].length != 2 ) {
 					throw new IndexOutOfBoundsException("Index is out of bounds!");
 				}
+				// for all valid balls, add the regular points
 				if (input[m][h] >= 0 || input[m][h] <= 10)
 					partScore += input[m][h];
 				
+				if ( strikeStep == true ) {
+					strikeBonus += input[m][h];
+					strikeStep = false;
+				}
+				if ( strike == 1 ) {
+					strikeBonus += input[m][h];
+					strike = 0;
+					strikeStep = true;
+				}
+				
+				// if strike
+				if ( input[m][h] == 10 ) {
+					strike += 1;
+					break;
+					//ball = 0;
+					//frames[currentFrame] = totalScore;
+					/*currentFrame++;
+					if ( currentFrame == 10) {
+						lastFrame = true;
+					}*/
+					// if strike in last frame
+				/*} else if ( input[m][h] == 10 && lastFrame == true) {
+						ball = 0;
+				}*/
+				
 			}
-				totalScore = partScore;
-			
+				// add gathered points and reset partScore
+				totalScore += partScore;
+				partScore = 0;	
+			}
 		}
 		/*
 		for (int i = 0; i < input.length; i++) {
@@ -95,10 +125,10 @@ public class BowlScore {
 				ball++;
 				
 		}
-	
+		*/
 		totalScore += spareBonus;
 		totalScore += strikeBonus;
-		int totalSum = totalScore; */
+		//int totalSum = totalScore;
 		return totalScore;
 	}
 }
