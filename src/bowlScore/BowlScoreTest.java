@@ -216,4 +216,20 @@ public class BowlScoreTest {
 		assertEquals(98, bowlscore.registerScore(input));
 	} 
 	
+	@Test
+	public void shouldReturn90() {
+		int[] frameOne = {1,5};
+		int[] frameTwo = {3,6};
+		int[] frameThree = {7,2};
+		int[] frameFour = {3,6};
+		int[] frameFive = {4,4};
+		int[] frameSix = {5,3};
+		int[] frameSeven = {3,3};
+		int[] frameEight = {4,5};
+		int[] frameNine = {8,1};
+		int[] frameTen = {2,8,7};
+		int[][] input = { frameOne, frameTwo, frameThree, frameFour, frameFive, frameSix, frameSeven, frameEight, frameNine, frameTen};
+		assertEquals(90, bowlscore.registerScore(input));
+	} 
+	
 }
