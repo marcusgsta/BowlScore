@@ -27,11 +27,19 @@ public class BowlScore {
 			// loop through frame
 			
 			for ( int h = 0; h < input[m].length; h++ ) {
+				// if length of a frame is not 2
 				if ( input[m].length != 2 ) {
-					if (input[m][0] + input[m][1] != 10) {
+					// check for strike in last frame
+					if ( input[m][0] == 10) {
+						
+					// check for spare in last frame
+					} else if ( input[m][0] + input[m][1] == 10) {
+						
+					} else {
 						throw new IndexOutOfBoundsException("Index is out of bounds!");
 					}
 				}
+
 				// for all valid balls, add the regular points
 				if (input[m][h] >= 0 || input[m][h] <= 10)
 					partScore += input[m][h];
@@ -50,7 +58,7 @@ public class BowlScore {
 				}
 				
 				// if strike
-				if ( input[m][h] == 10 ) {
+				if ( input[m][h] == 10 && Arrays.asList(input).indexOf(input[m]) != 9) {
 					strike += 1;
 					break;
 					
