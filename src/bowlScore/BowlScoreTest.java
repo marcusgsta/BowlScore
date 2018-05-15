@@ -279,4 +279,21 @@ public class BowlScoreTest {
 		int[][] input = { frameOne, frameTwo, frameThree, frameFour, frameFive, frameSix, frameSeven, frameEight, frameNine, frameTen};
 		assertEquals(300, bowlscore.registerScore(input));
 	}
+	
+	@Test
+	public void shouldReturn135() {
+		int[] frameOne = {6,3};
+		int[] frameTwo = {7,1};
+		int[] frameThree = {8,2};
+		int[] frameFour = {7,2};
+		int[] frameFive = {10,0};
+		int[] frameSix = {6,2};
+		int[] frameSeven = {7,3};
+		int[] frameEight = {10,0};
+		int[] frameNine = {8,0};
+		int[] frameTen = {7,3,10};
+		int[][] input = { frameOne, frameTwo, frameThree, frameFour, frameFive, frameSix, frameSeven, frameEight, frameNine, frameTen};
+		assertEquals(135, bowlscore.registerScore(input));
+	}
+	
 }
