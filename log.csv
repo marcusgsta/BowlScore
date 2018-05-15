@@ -1,0 +1,86 @@
+4eb9cc6,Marcus Gustafsson,5 minutes ago,Cleaned up
+36c23bd,Marcus Gustafsson,7 minutes ago,Wrote user story 14: real game
+7179fdb,Marcus Gustafsson,10 minutes ago,Wrote user story 13 perfect game
+5dc234e,Marcus Gustafsson,11 minutes ago,Wrote user story 12: strike in bonus throw
+cbc79a3,Marcus Gustafsson,26 minutes ago,Implemented user story 11: strike in last frame
+53cda1c,Marcus Gustafsson,49 minutes ago,Wrote user story 11: strike in last frame
+d4d19e8,Marcus Gustafsson,52 minutes ago,implemented user story 10: spare in last frame
+563ef30,Marcus Gustafsson,75 minutes ago,wrote user story 10: spare in last frame
+e445034,Marcus Gustafsson,77 minutes ago,Wrote user story 9: multiple spares
+9510ea4,Marcus Gustafsson,78 minutes ago,Wrote user story 8: strike+strike
+c05a4b5,Marcus Gustafsson,80 minutes ago,Wrote user story 7: strike+spare
+147bd87,Marcus Gustafsson,82 minutes ago,implemented user story 6: spare
+a90140b,Marcus Gustafsson,87 minutes ago,wrote user story 6: spare
+752abb0,Marcus Gustafsson,89 minutes ago,implemented user story one strike
+d1f3f01,Marcus Gustafsson,23 hours ago,wrote user story one strike ( 5 )
+f00713e,Marcus Gustafsson,23 hours ago,erased user story 2+6 because it wasnt necessary since we tested sending wrong amount of balls in frame
+f9727f8,Marcus Gustafsson,24 hours ago,implemented user story 3 - 10 frames in one game
+ec50cab,Marcus Gustafsson,24 hours ago,wrote testcase for user stories number 3 and 4
+265f6e9,Marcus Gustafsson,24 hours ago,implemented user story 2+6
+6007828,Marcus Gustafsson,24 hours ago,wrote user case frame with 2+6
+80e07dd,Marcus Gustafsson,24 hours ago,wrote user case one ball in frame should throw exception
+4a7349c,Marcus Gustafsson,25 hours ago,implemented user case 3 balls in one frame should throw exception
+f189bab,Marcus Gustafsson,25 hours ago,wrote user case to pass array of arrays
+d1d7de2,Marcus Gustafsson,2 days ago,wrote user story last frame no strike
+2f5bdbd,Marcus Gustafsson,2 days ago,implemented user story to throw out of bounds exception
+51fd24e,Marcus Gustafsson,2 days ago,wrote user story too many scores
+770de31,Marcus Gustafsson,2 days ago,implemented all strikes
+89b59f8,Marcus Gustafsson,2 days ago,corrected user case all strikes to 12 balls
+ec75412,Marcus Gustafsson,2 days ago,wrote user story all strikes
+686466e,Marcus Gustafsson,2 days ago,wrote user story strikes and spare consecutively
+8d5d357,Marcus Gustafsson,2 days ago,wrote user case strikes and spare
+559e132,Marcus Gustafsson,2 days ago,wrote user story 3 strikes
+b402956,Marcus Gustafsson,2 days ago,implemented user stories
+6a42f6b,Marcus Gustafsson,2 days ago,implemented user story 2 spares
+eec55d1,Marcus Gustafsson,2 days ago,implemented user story one strike
+56dc9fa,Marcus Gustafsson,2 days ago,restructured again
+08af416,Marcus Gustafsson,2 days ago,wrote user story 2 strikes
+7ee9d3e,Marcus Gustafsson,2 days ago,wrote user story all dashes
+f471743,Marcus Gustafsson,2 days ago,wrote user story one strike
+9f0b3ba,Marcus Gustafsson,2 days ago,wrote user story 2 spares
+439d7b0,Marcus Gustafsson,2 days ago,write user story one spare
+ae0892b,Marcus Gustafsson,2 days ago,starting over, pass whole series of scores
+8d9b774,Marcus Gustafsson,2 days ago,wrote user story strike+strike+1+4
+adb0a11,Marcus Gustafsson,2 days ago,wrote user story strike+strike+1
+0bf29e3,Marcus Gustafsson,2 days ago,Restructured a lot
+4f9e782,Marcus Gustafsson,3 days ago,wrote user story strike+strike+1+4+3
+2434876,Marcus Gustafsson,3 days ago,implemented user case strike+8+1+4+3
+e07c112,Marcus Gustafsson,3 days ago,edit user story
+1baf003,Marcus Gustafsson,3 days ago,edited user case strike+7 to expect 0, because waiting for full frame to be playes
+87ee00b,Marcus Gustafsson,3 days ago,implemented strike+8+1
+c469b90,Marcus Gustafsson,3 days ago,edited user story 4+6 to should return 0 because waiting for next ball to complete frame
+1dcec1e,Marcus Gustafsson,3 days ago,implemented user story 4+6+4 spare
+921032b,Marcus Gustafsson,3 days ago,edited user stories
+af3f0f5,Marcus Gustafsson,3 days ago,edited user story 11 to expect 7 because only full frames should be returned
+7c1f343,Marcus Gustafsson,3 days ago,redo of implementation of user story 4+5
+4752733,Marcus Gustafsson,3 days ago,reconstructed to handle frames
+400d2ca,Marcus Gustafsson,3 days ago,edited user case 10+8+1
+78ae0a0,Marcus Gustafsson,3 days ago,restructured to handle frames
+6d75419,Marcus Gustafsson,3 days ago,Simplified function to only handle integers
+7f54dc7,Marcus Gustafsson,3 days ago,edited user story to strike+8+1+4
+c28113a,Marcus Gustafsson,3 days ago,wrote user story strike+8+4
+9e3b164,Marcus Gustafsson,3 days ago,wrote user story 4+spare+4
+67891d7,Marcus Gustafsson,3 days ago,Wrote user story 4+3+4
+6a566c8,Marcus Gustafsson,3 days ago,Wrote user story dash+9
+8c103ed,Marcus Gustafsson,3 days ago,Wrote user story strike+7
+7fb9bb7,Marcus Gustafsson,3 days ago,Wrote user case 8+spare
+8b9aa92,Marcus Gustafsson,3 days ago,Implemented user case spare
+baccd1f,Marcus Gustafsson,3 days ago,Wrote user story spare
+ea60b5c,Marcus Gustafsson,3 days ago,wrote testcase for user story 3+2
+5b7a45c,Marcus Gustafsson,3 days ago,Fixed testcases to expect integrals in return
+f68255b,Marcus Gustafsson,3 days ago,updated testcases to pass arrays
+2ab1bd9,Marcus Gustafsson,3 days ago,Implemented user story 4+5
+499951a,Marcus Gustafsson,3 days ago,Wrote user story 4+5
+002bf0e,Marcus Gustafsson,3 days ago,Implemented user story strike
+ccb6624,Marcus Gustafsson,3 days ago,wrote testcase strike
+78b0f92,Marcus Gustafsson,3 days ago,reconstructed code
+8f5e205,Marcus Gustafsson,3 days ago,Implemented testcase foul
+a5f66ad,Marcus Gustafsson,3 days ago,wrote testcase for user story foul
+39f9ac2,Marcus Gustafsson,3 days ago,refactoring
+a7838e4,Marcus Gustafsson,4 days ago,Implemented testcase 3
+f061518,Marcus Gustafsson,4 days ago,Wrote testcase 3
+fa670fb,Marcus Gustafsson,4 days ago,Implemented testcase dash
+bdfad79,Marcus Gustafsson,4 days ago,Testcase dash
+d770cc4,Marcus Gustafsson,4 days ago,implemented first testcase
+0d650a7,Marcus Gustafsson,4 days ago,first test case
+c33d1f1,Marcus Gustafsson,4 days ago,first commit
