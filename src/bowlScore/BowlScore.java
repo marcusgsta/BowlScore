@@ -25,11 +25,12 @@ public class BowlScore {
 			// loop through all frames
 		for (int m = 0; m < input.length; m++) {
 			// loop through frame
-			//count = 0;
 			
 			for ( int h = 0; h < input[m].length; h++ ) {
 				if ( input[m].length != 2 ) {
-					throw new IndexOutOfBoundsException("Index is out of bounds!");
+					if (input[m][0] + input[m][1] != 10) {
+						throw new IndexOutOfBoundsException("Index is out of bounds!");
+					}
 				}
 				// for all valid balls, add the regular points
 				if (input[m][h] >= 0 || input[m][h] <= 10)
@@ -64,11 +65,12 @@ public class BowlScore {
 				}*/
 				
 				}
-				if ( partScore == 10 ) {
-					isSpare = true;
-					System.out.println(isSpare);
-				}
 
+				//System.out.println(Arrays.asList(input).indexOf(input[m]));
+				
+				if ( partScore == 10 && Arrays.asList(input).indexOf(input[m]) != 9) {
+					isSpare = true;
+				}
 			}
 			// add gathered points and reset partScore
 			totalScore += partScore;
