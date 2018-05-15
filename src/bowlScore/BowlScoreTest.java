@@ -264,4 +264,19 @@ public class BowlScoreTest {
 		assertEquals(93, bowlscore.registerScore(input));
 	}
 	
+	@Test
+	public void shouldReturn300() {
+		int[] frameOne = {10,10};
+		int[] frameTwo = {10,10};
+		int[] frameThree = {10,10};
+		int[] frameFour = {10,10};
+		int[] frameFive = {10,10};
+		int[] frameSix = {10,10};
+		int[] frameSeven = {10,10};
+		int[] frameEight = {10,10};
+		int[] frameNine = {10,10};
+		int[] frameTen = {10,10,10};
+		int[][] input = { frameOne, frameTwo, frameThree, frameFour, frameFive, frameSix, frameSeven, frameEight, frameNine, frameTen};
+		assertEquals(300, bowlscore.registerScore(input));
+	}
 }
