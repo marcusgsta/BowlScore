@@ -43,13 +43,16 @@ public class BowlScore {
 					strikeBonus += input[m][h];
 					strike = 0;
 					strikeStep = true;
+				} else if ( isSpare == true ) {
+					spareBonus += input[m][h];
+					isSpare = false;
 				}
 				
 				// if strike
 				if ( input[m][h] == 10 ) {
 					strike += 1;
 					break;
-					//ball = 0;
+					
 					//frames[currentFrame] = totalScore;
 					/*currentFrame++;
 					if ( currentFrame == 10) {
@@ -60,11 +63,16 @@ public class BowlScore {
 						ball = 0;
 				}*/
 				
+				}
+				if ( partScore == 10 ) {
+					isSpare = true;
+					System.out.println(isSpare);
+				}
+
 			}
-				// add gathered points and reset partScore
-				totalScore += partScore;
-				partScore = 0;	
-			}
+			// add gathered points and reset partScore
+			totalScore += partScore;
+			partScore = 0;	
 		}
 		/*
 		for (int i = 0; i < input.length; i++) {
